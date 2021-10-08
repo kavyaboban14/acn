@@ -1,0 +1,166 @@
+1)
+xam@debian:~$ mkdir FISAT
+exam@debian:~$ cd FISAT
+exam@debian:~/FISAT$ mkdir DAY1
+exam@debian:~/FISAT$ mkdir DAY2
+exam@debian:~/FISAT$ mkdir DAY3
+exam@debian:~/FISAT$ cd DAY1
+exam@debian:~/FISAT/DAY1$ cat > f1.txt
+this is file f1
+exam@debian:~/FISAT/DAY1$ cat > f2.txt
+this is file f2
+exam@debian:~/FISAT/DAY1$ cat > f3.txt
+this is file f3
+exam@debian:~/FISAT/DAY1$ cd ..
+exam@debian:~/FISAT$ cd DAY2
+exam@debian:~/FISAT/DAY2$ cat > m1.txt
+this is file m1
+exam@debian:~/FISAT/DAY2$ cat > m2.txt
+this is file m2
+exam@debian:~/FISAT/DAY2$ cd ..
+exam@debian:~/FISAT$ cd DAY3
+exam@debian:~/FISAT/DAY3$ cat > c1.txt
+this is file c1
+exam@debian:~/FISAT/DAY3$ cat > c2.txt
+this is file c2
+exam@debian:~/FISAT/DAY3$ cd ..
+exam@debian:~/FISAT$ cd DAY2
+
+q1)
+exam@debian:~/FISAT/DAY2$ cat m1.txt m2.txt >> m3.txt
+exam@debian:~/FISAT/DAY2$ cat m3.txt
+this is file m3
+this is file m1
+this is file m2
+q2)
+exam@debian:~/FISAT/DAY3$ cat > c3.txt
+exam@debian:~/FISAT/DAY2$ cp m3.txt  ~/FISAT/DAY3/c3.txt
+exam@debian:~/FISAT/DAY2$ cd ..
+exam@debian:~/FISAT$ cd DAY3
+exam@debian:~/FISAT/DAY3$ cat c3.txt
+this is file m3
+this is file m1
+this is file m2
+q3)
+exam@debian:~/FISAT/DAY1$ chmod -g -wt f1.txt
+q4)
+exam@debian:~/FISAT/DAY2$ pwd
+/home/exam/FISAT/DAY2
+q5)
+exam@debian:~/FISAT/DAY2$ ps -aux
+  
+  
+
+2)
+PROGRAM CODE 
+echo "enter your choice"
+echo " 1. area of circle "
+echo " 2. area of rectangle"
+echo " 3. area of triangle"
+read ch 
+case $ch in
+    
+    1) echo " the area of circle "
+       echo " enter the radius "
+       read r
+       echo "area :"
+       echo  "$(( r * r * 22/7 ))"
+       ;;
+    2) echo " the area of rectangle "
+       echo "enter the length"
+       read l
+       echo "enter the breath"
+       read b
+       echo "area :"
+       echo "$((l * b ))"
+       ;;
+    3) echo " the area of triangle"
+       echo "enter the length"
+       read l
+       echo "enter the breath"
+       read b
+       echo "area :"
+       echo "$(( l * b *  1/2 ))"
+       ;;
+    esac
+    
+    
+    OUTPUT 
+exam@debian:~/FISAT$ bash area.sh
+enter your choice
+ 1. area of circle 
+ 2. area of rectangle
+ 3. area of triangle
+1
+ the area of circle 
+ enter the radius 
+10
+area :
+314
+exam@debian:~/FISAT$ bash area.sh
+enter your choice
+ 1. area of circle 
+ 2. area of rectangle
+ 3. area of triangle
+1
+ the area of circle 
+ enter the radius 
+4
+area :
+50
+
+exam@debian:~/FISAT$ bash area.sh
+enter your choice
+ 1. area of circle 
+ 2. area of rectangle
+ 3. area of triangle
+3
+ the area of triangle
+enter the length
+4
+enter the breath
+3
+area :
+6
+exam@debian:~/FISAT$ bash area.sh
+enter your choice
+ 1. area of circle 
+ 2. area of rectangle
+ 3. area of triangle
+3
+ the area of triangle
+enter the length
+3
+enter the breath
+3
+area :
+4
+exam@debian:~/FISAT$ bash area.sh
+enter your choice
+ 1. area of circle 
+ 2. area of rectangle
+ 3. area of triangle
+2
+ the area of rectangle 
+enter the length
+2
+enter the breath
+4
+area :
+8
+exam@debian:~/FISAT$ bash area.sh
+enter your choice
+ 1. area of circle 
+ 2. area of rectangle
+ 3. area of triangle
+2
+ the area of rectangle 
+enter the length
+4
+enter the breath
+3
+area :
+12
+
+ 
+ 
